@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Diário Virtual</title>
+    <!-- Aqui conectamos o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte bonita do Google Fonts para o título -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Coluna da esquerda: Histórico -->
+        <aside class="sidebar">
+            <h2>Páginas Anteriores</h2>
+            <ul id="entries-list">
+                <!-- As anotações antigas aparecerão aqui -->
+            </ul>
+        </aside>
+
+        <!-- Área principal: Escrever no diário -->
+        <main class="editor">
+            <header>
+                <h1>Meu Diário Virtual 📖</h1>
+                <p>Como foi o seu dia hoje?</p>
+            </header>
+            
+            <form id="diary-form">
+                <div class="mood-selector">
+                    <label>Humor do dia:</label>
+                    <select id="mood">
+                        <option value="😊">😊 Feliz</option>
+                        <option value="😌">😌 Tranquilo</option>
+                        <option value="😔">😔 Triste</option>
+                        <option value="😡">😡 Irritado</option>
+                    </select>
+                </div>
+                
+                <textarea id="diary-text" placeholder="Querido diário..." required></textarea>
+                
+               <!-- O botão de salvar antigo -->
+                <button type="submit">Salvar Página</button>
+                
+                <!-- NOVO: Botão para gerar o PDF (Coloque logo abaixo do botão de salvar) -->
+                <button type="button" id="btn-pdf" style="background-color: #d4a373; margin-left: 10px;">Exportar para PDF</button>
+            </form>
+        </main>
+    </div>
+
+    <!-- NOVO: Biblioteca que transforma HTML em PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+            </form>
+        </main>
+    </div>
+
+    
+    <!-- Nosso script padrão -->
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>  

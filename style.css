@@ -1,0 +1,172 @@
+/* --- VARIÁVEIS DE CORES --- */
+:root {
+    --bg-color: #fdfbf7; /* Cor de papel antigo */
+    --text-color: #333333;
+    --primary: #434bb6; /* Verde pastel */
+    --primary-hover: #4daad4;
+    --sidebar-bg: #f4f1ea;
+    --border-color: #e0dcd3;
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(46, 40, 40, 0.733);
+    overflow: hidden;
+}
+
+/* --- BARRA LATERAL (HISTÓRICO) --- */
+.sidebar {
+    width: 30%;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    border-right: 2px solid var(--border-color);
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-hover);
+}
+
+.entry-item {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* --- ÁREA DO DIÁRIO --- */
+.editor {
+    width: 70%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    color: var(--primary-hover);
+}
+
+.mood-selector {
+    margin: 20px 0;
+}
+
+.mood-selector select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+textarea {
+    flex-grow: 1;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    resize: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background-color: #faf9f5;
+    background-image: repeating-linear-gradient(transparent, transparent 31px, var(--border-color) 32px); /* Linhas de caderno */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* --- RESPONSIVIDADE (Para Celulares e Tablets) --- */
+@media (max-width: 768px) {
+    /* Muda a direção da caixa para empilhar em vez de ficar lado a lado */
+    .container {
+        flex-direction: column-reverse; /* Coloca o histórico embaixo e a área de escrever em cima */
+        height: 95vh;
+        width: 95%;
+    }
+
+    /* A barra lateral (histórico) agora ocupa toda a largura */
+    .sidebar {
+        width: 100%;
+        height: 35%; /* Ocupa um terço da tela */
+        border-right: none;
+        border-top: 2px solid var(--border-color); /* Linha divisória em cima */
+    }
+
+    /* A área de escrever também ocupa toda a largura */
+    .editor {
+        width: 100%;
+        height: 65%; /* Ocupa o resto da tela */
+        padding: 20px; /* Reduz o espaço nas bordas para caber melhor no celular */
+    }
+
+    .editor h1 {
+        font-size: 2rem; /* Diminui um pouco o título principal */
+    }
+}
+
+/* --- ESTILOS DA LISTA E BOTÃO DE EXCLUIR --- */
+.entry-item {
+    display: flex;
+    justify-content: space-between; /* Coloca o texto de um lado e o botão do outro */
+    align-items: center;
+    /* ... (seus estilos anteriores do entry-item continuam valendo) ... */
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 0; /* Tira aquela margem superior que os outros botões têm */
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #ffe6e6; /* Fundo vermelhinho ao passar o mouse */
+    border-radius: 5px;
+}
