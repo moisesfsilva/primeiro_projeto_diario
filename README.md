@@ -1,0 +1,2 @@
+# primeiro_projeto_diario
+# 📖 Meu Diário Virtual  Um aplicativo web front-end responsivo desenvolvido para simular a experiência de um caderno físico no ambiente digital. O projeto permite a criação, visualização, exclusão e exportação de anotações diárias, armazenando os dados diretamente no navegador do usuário. 
