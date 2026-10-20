@@ -1,2 +1,27 @@
-# primeiro_projeto_diario
-# 📖 Meu Diário Virtual  Um aplicativo web front-end responsivo desenvolvido para simular a experiência de um caderno físico no ambiente digital. O projeto permite a criação, visualização, exclusão e exportação de anotações diárias, armazenando os dados diretamente no navegador do usuário. 
+# 📖 Meu Diário Virtual
+
+Um projeto web de um diário virtual pessoal, construído para praticar os fundamentos de desenvolvimento web (HTML, CSS e JavaScript). Ele permite escrever anotações diárias, registrar o humor do dia e exportar as páginas como PDF.
+
+## ✨ Funcionalidades
+
+- **📝 Escrita e Leitura:** Criação de novas páginas no diário e leitura de anotações antigas.
+- **😊 Rastreador de Humor:** Seleção de emojis para registrar o sentimento do dia.
+- **💾 Armazenamento Local:** Utilização do `localStorage` do navegador para salvar os dados (as anotações não são perdidas ao fechar a página).
+- **🗑️ Gerenciamento (CRUD):** Capacidade de visualizar e excluir páginas antigas do histórico.
+- **📄 Exportação para PDF:** Funcionalidade que permite baixar a página do dia em formato `.pdf` utilizando a biblioteca `html2pdf.js`.
+- **📱 Responsividade:** O layout se adapta perfeitamente a computadores, tablets e celulares (graças ao uso de *Media Queries* no CSS).
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5:** Estrutura semântica da página.
+- **CSS3:** Estilização, layout (Flexbox) e design responsivo.
+- **JavaScript (Vanilla):** Lógica de programação, manipulação do DOM e integração com o Local Storage.
+- **Bibliotecas Externas:** [html2pdf.js](https://ekoopmans.github.io/html2pdf.js/) (via CDN).
+
+## 🚀 Como executar o projeto
+
+Como o projeto utiliza tecnologias nativas da web, não é necessária nenhuma instalação complexa.
+
+1. Clone este repositório no seu computador:
+   ```bash
+   git clone [https://github.com/moisesfsilva/primeiro_projeto_diario.git](https://github.com/moisesfsilva/primeiro_projeto_diario.git)
